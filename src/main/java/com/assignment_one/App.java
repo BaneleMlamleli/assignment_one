@@ -4,6 +4,10 @@ import javax.swing.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * @Author  Banele Mlamleli - 213058552
+ * Assignment one
+* */
 public class App
 {
     static Scanner scn = new Scanner(System.in);
