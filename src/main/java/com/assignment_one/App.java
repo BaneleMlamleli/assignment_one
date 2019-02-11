@@ -4,10 +4,6 @@ import javax.swing.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     static Scanner scn = new Scanner(System.in);
@@ -41,13 +37,13 @@ public class App
         }while (exitAddition != 'y');
     }
 
-    public void subtraction(double firstValue, double secondValue){
+    public void subtraction(){
     }
 
-    public void multiplication(double firstValue, double secondValue){
+    public void multiplication(){
     }
 
-    public void division(double numerator, double denominator){
+    public void division(){
     }
 
     public static void main( String[] args )
@@ -85,9 +81,18 @@ public class App
                     System.out.println("\n\tAddition\n\t********\n");
                     app.addition();
                     break;
-                case 's': ;break;
-                case 'm': ;break;
-                case 'd': ;break;
+                case 's':
+                    System.out.println("\n\tSubtraction\n\t************\n");
+                    app.subtraction();
+                    break;
+                case 'm':
+                    System.out.println("\n\tMultiplication\n\t**************\n");
+                    app.multiplication();
+                    break;
+                case 'd':
+                    System.out.println("\n\tDivision\n\t********\n");
+                    app.division();
+                    break;
             }
             System.out.print("\n**********************\nExit calculator Yes/No: ");
             exit = scn.next().toLowerCase().charAt(0);
