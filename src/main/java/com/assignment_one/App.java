@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class App 
+public class App
 {
     static Scanner scn = new Scanner(System.in);
 
@@ -38,12 +38,90 @@ public class App
     }
 
     public void subtraction(){
+        char exitSubtraction;
+        do {
+            try{
+                System.out.print("Enter first value: ");
+                double firstValue = scn.nextDouble();
+                System.out.print("Enter second value: ");
+                double secondValue = scn.nextDouble();
+                double subtraction = firstValue - secondValue;
+                System.out.println(firstValue + " - " + secondValue + " = " + subtraction);
+            }catch (NumberFormatException nfe){
+                JOptionPane.showMessageDialog(null, nfe.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            catch (InputMismatchException im){
+                JOptionPane.showMessageDialog(null, im.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
+
+            System.out.print("Exit addition Yes/No: ");
+            exitSubtraction = scn.next().toLowerCase().charAt(0);
+
+            //checking if the entered option matches the options provided
+            while((exitSubtraction != 'y')&&(exitSubtraction != 'n')){
+                JOptionPane.showMessageDialog(null, "Incorrect entry. re-try", "Error!", JOptionPane.ERROR_MESSAGE);
+                System.out.print("Exit subtraction? Yes/No: ");
+                exitSubtraction = scn.next().toLowerCase().charAt(0);
+            }
+        }while (exitSubtraction != 'y');
     }
 
     public void multiplication(){
+        char exitMultiplicatioin;
+        do {
+            try{
+                System.out.print("Enter first value: ");
+                double firstValue = scn.nextDouble();
+                System.out.print("Enter second value: ");
+                double secondValue = scn.nextDouble();
+                double multiply = firstValue * secondValue;
+                System.out.println(firstValue + " x " + secondValue + " = " + multiply);
+            }catch (NumberFormatException nfe){
+                JOptionPane.showMessageDialog(null, nfe.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            catch (InputMismatchException im){
+                JOptionPane.showMessageDialog(null, im.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
+
+            System.out.print("Exit multiplication Yes/No: ");
+            exitMultiplicatioin = scn.next().toLowerCase().charAt(0);
+
+            //checking if the entered option matches the options provided
+            while((exitMultiplicatioin != 'y')&&(exitMultiplicatioin != 'n')){
+                JOptionPane.showMessageDialog(null, "Incorrect entry. re-try", "Error!", JOptionPane.ERROR_MESSAGE);
+                System.out.print("Exit Multiplication? Yes/No: ");
+                exitMultiplicatioin = scn.next().toLowerCase().charAt(0);
+            }
+        }while (exitMultiplicatioin != 'y');
     }
 
     public void division(){
+        char exitDivision;
+        do {
+            try{
+                System.out.print("Enter first value: ");
+                double firstValue = scn.nextDouble();
+                System.out.print("Enter second value: ");
+                double secondValue = scn.nextDouble();
+                double division = firstValue / secondValue;
+                System.out.println(firstValue + " - " + secondValue + " = " + division);
+            }catch (NumberFormatException nfe){
+                JOptionPane.showMessageDialog(null, nfe.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            catch (InputMismatchException im){
+                JOptionPane.showMessageDialog(null, im.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
+
+            System.out.print("Exit addition Yes/No: ");
+            exitDivision = scn.next().toLowerCase().charAt(0);
+
+            //checking if the entered option matches the options provided
+            while((exitDivision != 'y')&&(exitDivision != 'n')){
+                JOptionPane.showMessageDialog(null, "Incorrect entry. re-try", "Error!", JOptionPane.ERROR_MESSAGE);
+                System.out.print("Exit division? Yes/No: ");
+                exitDivision = scn.next().toLowerCase().charAt(0);
+            }
+        }while (exitDivision != 'y');
     }
 
     public static void main( String[] args )
