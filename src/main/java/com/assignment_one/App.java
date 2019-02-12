@@ -3,7 +3,6 @@ package com.assignment_one;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 
 /**
  * @Author  Banele Mlamleli - 213058552
@@ -12,9 +11,9 @@ import java.util.Scanner;
 public class App
 {
     // static Scanner scn = new Scanner(System.in);
-    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    public void addition(){
+    private void addition(){
         char exitAddition;
         try {
             do {
@@ -43,7 +42,7 @@ public class App
         }
     }
 
-    public void subtraction(){
+    private void subtraction(){
         char exitSubtraction;
         try {
             do {
@@ -73,7 +72,7 @@ public class App
         }
     }
 
-    public void multiplication(){
+    private void multiplication(){
         char exitMultiplicatioin;
         try {
             do {
@@ -102,7 +101,7 @@ public class App
         }
     }
 
-    public void division(){
+    private void division(){
         char exitDivision;
         try {
             do {
