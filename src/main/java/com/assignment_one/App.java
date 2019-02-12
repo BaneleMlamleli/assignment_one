@@ -1,10 +1,8 @@
 package com.assignment_one;
 
-import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -13,7 +11,7 @@ import java.util.Scanner;
 * */
 public class App
 {
-    static Scanner scn = new Scanner(System.in);
+    // static Scanner scn = new Scanner(System.in);
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     public void addition(){
@@ -32,12 +30,12 @@ public class App
                 }
 
                 System.out.print("Are you done with addition? Yes/No: ");
-                exitAddition = scn.next().toLowerCase().charAt(0);
+                exitAddition = br.readLine().toLowerCase().charAt(0); // scn.next().toLowerCase().charAt(0);
 
                 //checking if the entered option matches the options provided
                 while ((exitAddition != 'y') && (exitAddition != 'n')) {
                     System.out.print("Incorrect entry. Expected Yes or No. Exit addition? Yes/No: ");
-                    exitAddition = scn.next().toLowerCase().charAt(0);
+                    exitAddition = br.readLine().toLowerCase().charAt(0); // scn.next().toLowerCase().charAt(0);
                 }
             } while (exitAddition != 'y');
         }catch (IOException ioe){
@@ -62,12 +60,12 @@ public class App
 
 
                 System.out.print("Are you done with subtraction? Yes/No: ");
-                exitSubtraction = scn.next().toLowerCase().charAt(0);
+                exitSubtraction = br.readLine().toLowerCase().charAt(0); // scn.next().toLowerCase().charAt(0);
 
                 //checking if the entered option matches the options provided
                 while ((exitSubtraction != 'y') && (exitSubtraction != 'n')) {
                     System.out.print("Incorrect entry. Expected Yes or No. Exit subtraction? Yes/No: ");
-                    exitSubtraction = scn.next().toLowerCase().charAt(0);
+                    exitSubtraction = br.readLine().toLowerCase().charAt(0); // scn.next().toLowerCase().charAt(0);
                 }
             } while (exitSubtraction != 'y');
         }catch (IOException ioe){
@@ -91,12 +89,12 @@ public class App
                 }
 
                 System.out.print("Are you done multiplication? Yes/No: ");
-                exitMultiplicatioin = scn.next().toLowerCase().charAt(0);
+                exitMultiplicatioin = br.readLine().toLowerCase().charAt(0); // scn.next().toLowerCase().charAt(0);
 
                 //checking if the entered option matches the options provided
                 while ((exitMultiplicatioin != 'y') && (exitMultiplicatioin != 'n')) {
                     System.out.print("Incorrect entry. Expected Yes or No. Exit Multiplication? Yes/No: ");
-                    exitMultiplicatioin = scn.next().toLowerCase().charAt(0);
+                    exitMultiplicatioin = br.readLine().toLowerCase().charAt(0); // scn.next().toLowerCase().charAt(0);
                 }
             } while (exitMultiplicatioin != 'y');
         }catch (IOException ioe){
@@ -131,7 +129,7 @@ public class App
                 //checking if the entered option matches the options provided
                 while ((exitDivision != 'y') && (exitDivision != 'n')) {
                     System.out.print("Incorrect entry. Expected Yes or No. Exit division? Yes/No: ");
-                    exitDivision = scn.next().toLowerCase().charAt(0);
+                    exitDivision = br.readLine().toLowerCase().charAt(0); // scn.next().toLowerCase().charAt(0);
                 }
             } while (exitDivision != 'y');
         }catch (IOException ioe){
