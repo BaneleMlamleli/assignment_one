@@ -1,11 +1,8 @@
 package com.assignment_one;
 
-import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
 /**
  * @Author  Banele Mlamleli - 213058552
@@ -13,10 +10,10 @@ import java.util.Scanner;
 * */
 public class App
 {
-    static Scanner scn = new Scanner(System.in);
-    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    // static Scanner scn = new Scanner(System.in);
+    private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    public void addition(){
+    private void addition(){
         char exitAddition;
         try {
             do {
@@ -32,12 +29,12 @@ public class App
                 }
 
                 System.out.print("Are you done with addition? Yes/No: ");
-                exitAddition = scn.next().toLowerCase().charAt(0);
+                exitAddition = br.readLine().toLowerCase().charAt(0); // scn.next().toLowerCase().charAt(0);
 
                 //checking if the entered option matches the options provided
                 while ((exitAddition != 'y') && (exitAddition != 'n')) {
                     System.out.print("Incorrect entry. Expected Yes or No. Exit addition? Yes/No: ");
-                    exitAddition = scn.next().toLowerCase().charAt(0);
+                    exitAddition = br.readLine().toLowerCase().charAt(0); // scn.next().toLowerCase().charAt(0);
                 }
             } while (exitAddition != 'y');
         }catch (IOException ioe){
@@ -45,7 +42,7 @@ public class App
         }
     }
 
-    public void subtraction(){
+    private void subtraction(){
         char exitSubtraction;
         try {
             do {
@@ -62,12 +59,12 @@ public class App
 
 
                 System.out.print("Are you done with subtraction? Yes/No: ");
-                exitSubtraction = scn.next().toLowerCase().charAt(0);
+                exitSubtraction = br.readLine().toLowerCase().charAt(0); // scn.next().toLowerCase().charAt(0);
 
                 //checking if the entered option matches the options provided
                 while ((exitSubtraction != 'y') && (exitSubtraction != 'n')) {
                     System.out.print("Incorrect entry. Expected Yes or No. Exit subtraction? Yes/No: ");
-                    exitSubtraction = scn.next().toLowerCase().charAt(0);
+                    exitSubtraction = br.readLine().toLowerCase().charAt(0); // scn.next().toLowerCase().charAt(0);
                 }
             } while (exitSubtraction != 'y');
         }catch (IOException ioe){
@@ -75,7 +72,7 @@ public class App
         }
     }
 
-    public void multiplication(){
+    private void multiplication(){
         char exitMultiplicatioin;
         try {
             do {
@@ -91,12 +88,12 @@ public class App
                 }
 
                 System.out.print("Are you done multiplication? Yes/No: ");
-                exitMultiplicatioin = scn.next().toLowerCase().charAt(0);
+                exitMultiplicatioin = br.readLine().toLowerCase().charAt(0); // scn.next().toLowerCase().charAt(0);
 
                 //checking if the entered option matches the options provided
                 while ((exitMultiplicatioin != 'y') && (exitMultiplicatioin != 'n')) {
                     System.out.print("Incorrect entry. Expected Yes or No. Exit Multiplication? Yes/No: ");
-                    exitMultiplicatioin = scn.next().toLowerCase().charAt(0);
+                    exitMultiplicatioin = br.readLine().toLowerCase().charAt(0); // scn.next().toLowerCase().charAt(0);
                 }
             } while (exitMultiplicatioin != 'y');
         }catch (IOException ioe){
@@ -104,7 +101,7 @@ public class App
         }
     }
 
-    public void division(){
+    private void division(){
         char exitDivision;
         try {
             do {
@@ -119,7 +116,7 @@ public class App
                         System.out.println("Error! You cannot divide by zero");
                     } else {
                         double division = firstValue / secondValue;
-                        System.out.println(firstValue + " - " + secondValue + " = " + division);
+                        System.out.println(firstValue + " / " + secondValue + " = " + division);
                     }
                 } catch (NumberFormatException nfe) {
                     System.out.println("Error!! " + nfe.getMessage());
@@ -131,7 +128,7 @@ public class App
                 //checking if the entered option matches the options provided
                 while ((exitDivision != 'y') && (exitDivision != 'n')) {
                     System.out.print("Incorrect entry. Expected Yes or No. Exit division? Yes/No: ");
-                    exitDivision = scn.next().toLowerCase().charAt(0);
+                    exitDivision = br.readLine().toLowerCase().charAt(0); // scn.next().toLowerCase().charAt(0);
                 }
             } while (exitDivision != 'y');
         }catch (IOException ioe){
