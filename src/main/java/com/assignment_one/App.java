@@ -116,7 +116,7 @@ public class App
                         System.out.println("Error! You cannot divide by zero");
                     } else {
                         double division = firstValue / secondValue;
-                        System.out.println(firstValue + " - " + secondValue + " = " + division);
+                        System.out.println(firstValue + " / " + secondValue + " = " + division);
                     }
                 } catch (NumberFormatException nfe) {
                     System.out.println("Error!! " + nfe.getMessage());
